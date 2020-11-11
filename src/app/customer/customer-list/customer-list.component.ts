@@ -8,10 +8,10 @@ import { Component, OnInit } from '@angular/core';
 export class CustomerListComponent implements OnInit {
 
   list = [
-    {id:1, name: 'John Smith'},
-    {id:2, name: 'Anna Highland'},
-    {id:3, name: 'Emile Poiret'}
-  ]
+    {id: 1, name: 'John Smith'},
+    {id: 2, name: 'Anna Highland'},
+    {id: 3, name: 'Emile Poiret'}
+  ];
   constructor() { }
 
   ngOnInit(): void {
