@@ -7,9 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SupplierListComponent implements OnInit {
   list = [
-    {id:1, name: 'proveedor interno'},
-    {id:2, name: 'proveedor externo'},
-    {id:3, name: 'proveedor local'}
+    {id: 1, name: 'proveedor interno'},
+    {id: 2, name: 'proveedor externo'},
+    {id: 3, name: 'proveedor local'}
   ]
   constructor() { }
 

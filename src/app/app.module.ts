@@ -11,22 +11,32 @@ import { CustomerDetailComponent } from './customer/customer-detail/customer-det
 import { SupplierListComponent } from './supplier/supplier-list/supplier-list.component';
 import { SupplierDetailComponent } from './supplier/supplier-detail/supplier-detail.component';
 
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import {MatCardModule} from '@angular/material/card';
+
 @NgModule({
   declarations: [
     AppComponent,
     CustomerListComponent,
     CustomerDetailComponent,
     SupplierListComponent,
-    SupplierDetailComponent
+    SupplierDetailComponent,
+    /* MatFormFieldControl */
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     CommonsModule,
     BrowserAnimationsModule,
-    MaterialModule
+    MaterialModule,
+    ReactiveFormsModule,
+    FormsModule,
+    MatCardModule,
+
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  exports: []
 })
 export class AppModule { }

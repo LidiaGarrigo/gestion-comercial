@@ -1,12 +1,5 @@
 <h1>Customers</h1>
-<mat-nav-list>
-<!--   <a mat-list-item routerLink="/customer/1">Customer: John Smith</a>
-  <a mat-list-item routerLink="/customer/2">Customer: Anna Highland</a>
-  <a mat-list-item routerLink="/customer/3">Customer: Emile Poiret</a>
- -->
-
- <a mat-list-item [routerLink]="[list[0].id,{name:list[0].name}]">Proveedor: interno</a>
- <a mat-list-item [routerLink]="[list[1].id,{name:list[1].name}]">Proveedor: externo</a>
- <a mat-list-item [routerLink]="[list[2].id,{name:list[2].name}]">Proveedor: local</a>
-
-</mat-nav-list>
+<ul *ngFor= "let supplier of list">
+  <li><a [routerLink]= '[supplier.id,{name:supplier.name}]'>Proveedor: {{supplier.name}}</a>
+</li>
+</ul>

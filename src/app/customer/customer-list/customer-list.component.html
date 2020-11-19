@@ -1,14 +1,16 @@
-<h1>Customers</h1>
-<mat-list *ngFor="let customer of list">
-<!--   <a mat-list-item routerLink="/customer/1">Customer: John Smith</a>
-  <a mat-list-item routerLink="/customer/2">Customer: Anna Highland</a>
-  <a mat-list-item routerLink="/customer/3">Customer: Emile Poiret</a>
- -->
- <a mat-list-item [routerLink]="[customer.id,{name:customer.name}]">Customer: {{customer.name}}</a>
- <!-- <a mat-list-item [routerLink]="[list[0].id,{name:list[0].name}]">Customer: John Smith</a>
- <a mat-list-item [routerLink]="[list[1].id,{name:list[1].name}]">Customer: Anna Highland</a>
- <a mat-list-item [routerLink]="[list[2].id,{name:list[2].name}]">Customer: Emile Poiret</a> -->
-
-</mat-list>
+<mat-toolbar class="title" color="warn">
+  <mat-toolbar-row>
+    <h1>Customers</h1>
+  </mat-toolbar-row>
+  <mat-divider></mat-divider>
+</mat-toolbar>
+<div class="customer-list">
+  <mat-nav-list *ngFor="let customer of customers; trackBy:customerTrackerFunction">
+    <a mat-list-item [routerLink]="[customer.id,customer]" routerLinkActive="active"
+      [routerLinkActiveOptions]="{exact: true}">
+      {{ customer.name }} </a>
+  </mat-nav-list>
+  <mat-divider></mat-divider>
+</div>
 
 <router-outlet></router-outlet>

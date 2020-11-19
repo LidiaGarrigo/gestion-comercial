@@ -1,6 +1,5 @@
 import { CustomerDetailComponent } from './customer/customer-detail/customer-detail.component';
 import { CustomerListComponent } from './customer/customer-list/customer-list.component';
-  /* import { NotfoundComponent } from './../../../../bcncodes/projects/gest-comercial/src/app/commons/notfound/notfound.component'; */
 import { HomeComponent } from './commons/home/home.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
@@ -20,7 +19,7 @@ const routes: Routes = [
   { path: 'supplier', component: SupplierListComponent },
   { path: 'supplier/:id', component: SupplierDetailComponent },
   { path: 'storing',
-  loadChildren: ()=> import('./storing/storing.module').then(m =>m.StoringModule) },
+  loadChildren: () => import('./storing/storing.module').then(m => m.StoringModule) },
   { path: '**', component: NotfoundComponent }
 ];
 

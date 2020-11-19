@@ -1,3 +1,18 @@
-a{
-  text-decoration: none;
+:host{
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: flex-start;
+  height: 90%;
+}
+mat-nav-list
+{
+  display:block;
+}
+.customer-detail
+{
+  padding-top: 2rem;
+  align-self: center;
+}
+.active{
+  color: green;
 }
